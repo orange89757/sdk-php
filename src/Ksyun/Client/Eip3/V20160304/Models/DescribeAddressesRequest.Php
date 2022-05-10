@@ -10,7 +10,7 @@ class DescribeAddressesRequest extends BaseModel
         "ProjectId" => null,
          /**String**/
         "IpVersion" => null,
-         /**Double**/
+         /**Int**/
         "MaxResults" => null,
          /**String**/
         "NextToken" => null,
