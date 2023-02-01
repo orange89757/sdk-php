@@ -5,11 +5,8 @@ use Ksyun\Common\BaseModel;
 
 class DeleteAccessKeyResponse extends BaseModel
 {
-         /** **/
-         public  $result;
-
-         /** **/
-         public  $RequestId;
+         /** DeleteAccessKeyResponse**/
+         public  $DeleteAccessKeyResponse;
 
          public function __construct()
          {
@@ -21,11 +18,8 @@ class DeleteAccessKeyResponse extends BaseModel
             if ($param === null) {
                 return;
             }
-            if (array_key_exists("result",$param) and $param["result"] !== null) {
-                $this->result = $param["result"];
-            }
-            if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-                $this->RequestId = $param["RequestId"];
+            if (array_key_exists("DeleteAccessKeyResponse",$param) and $param["DeleteAccessKeyResponse"] !== null) {
+                $this->DeleteAccessKeyResponse = $param["DeleteAccessKeyResponse"];
             }
 
         }

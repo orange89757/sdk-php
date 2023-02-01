@@ -6,12 +6,8 @@ use Ksyun\Common\BaseModel;
 class ListEntitiesForPolicyRequest extends BaseModel
 {
     public $RequestParams = [
-         /**String**/
-        "PolicyKrn" => null,
          /**Int**/
-        "MaxItems" => null,
-         /**String**/
-        "Marker" => null,
+        "Type" => null,
     ];
 
 
@@ -25,25 +21,11 @@ class ListEntitiesForPolicyRequest extends BaseModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PolicyKrn",$param) and $param["PolicyKrn"] !== null) {
-            if(is_bool($param["PolicyKrn"])){
-                $this->RequestParams["PolicyKrn"] = $param["PolicyKrn"] ? "true" : "false";
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            if(is_bool($param["Type"])){
+                $this->RequestParams["Type"] = $param["Type"] ? "true" : "false";
             } else {
-                $this->RequestParams["PolicyKrn"] = $param["PolicyKrn"];
-            }
-        }
-        if (array_key_exists("MaxItems",$param) and $param["MaxItems"] !== null) {
-            if(is_bool($param["MaxItems"])){
-                $this->RequestParams["MaxItems"] = $param["MaxItems"] ? "true" : "false";
-            } else {
-                $this->RequestParams["MaxItems"] = $param["MaxItems"];
-            }
-        }
-        if (array_key_exists("Marker",$param) and $param["Marker"] !== null) {
-            if(is_bool($param["Marker"])){
-                $this->RequestParams["Marker"] = $param["Marker"] ? "true" : "false";
-            } else {
-                $this->RequestParams["Marker"] = $param["Marker"];
+                $this->RequestParams["Type"] = $param["Type"];
             }
         }
 

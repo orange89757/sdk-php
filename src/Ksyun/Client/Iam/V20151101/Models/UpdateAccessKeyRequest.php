@@ -7,11 +7,15 @@ class UpdateAccessKeyRequest extends BaseModel
 {
     public $RequestParams = [
          /**String**/
+        "Action" => null,
+         /**String**/
+        "Version" => null,
+         /**String**/
         "AccessKeyId" => null,
          /**String**/
-        "UserName" => null,
-         /**String**/
         "Status" => null,
+         /**String**/
+        "UserName" => null,
     ];
 
 
@@ -25,6 +29,20 @@ class UpdateAccessKeyRequest extends BaseModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Action",$param) and $param["Action"] !== null) {
+            if(is_bool($param["Action"])){
+                $this->RequestParams["Action"] = $param["Action"] ? "true" : "false";
+            } else {
+                $this->RequestParams["Action"] = $param["Action"];
+            }
+        }
+        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
+            if(is_bool($param["Version"])){
+                $this->RequestParams["Version"] = $param["Version"] ? "true" : "false";
+            } else {
+                $this->RequestParams["Version"] = $param["Version"];
+            }
+        }
         if (array_key_exists("AccessKeyId",$param) and $param["AccessKeyId"] !== null) {
             if(is_bool($param["AccessKeyId"])){
                 $this->RequestParams["AccessKeyId"] = $param["AccessKeyId"] ? "true" : "false";
@@ -32,18 +50,18 @@ class UpdateAccessKeyRequest extends BaseModel
                 $this->RequestParams["AccessKeyId"] = $param["AccessKeyId"];
             }
         }
-        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
-            if(is_bool($param["UserName"])){
-                $this->RequestParams["UserName"] = $param["UserName"] ? "true" : "false";
-            } else {
-                $this->RequestParams["UserName"] = $param["UserName"];
-            }
-        }
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             if(is_bool($param["Status"])){
                 $this->RequestParams["Status"] = $param["Status"] ? "true" : "false";
             } else {
                 $this->RequestParams["Status"] = $param["Status"];
+            }
+        }
+        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
+            if(is_bool($param["UserName"])){
+                $this->RequestParams["UserName"] = $param["UserName"] ? "true" : "false";
+            } else {
+                $this->RequestParams["UserName"] = $param["UserName"];
             }
         }
 

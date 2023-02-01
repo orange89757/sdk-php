@@ -5,11 +5,8 @@ use Ksyun\Common\BaseModel;
 
 class DetachRolePolicyResponse extends BaseModel
 {
-         /** **/
-         public  $result;
-
-         /** **/
-         public  $RequestId;
+         /** DetachRolePolicyResponse**/
+         public  $DetachRolePolicyResponse;
 
          public function __construct()
          {
@@ -21,11 +18,8 @@ class DetachRolePolicyResponse extends BaseModel
             if ($param === null) {
                 return;
             }
-            if (array_key_exists("result",$param) and $param["result"] !== null) {
-                $this->result = $param["result"];
-            }
-            if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-                $this->RequestId = $param["RequestId"];
+            if (array_key_exists("DetachRolePolicyResponse",$param) and $param["DetachRolePolicyResponse"] !== null) {
+                $this->DetachRolePolicyResponse = $param["DetachRolePolicyResponse"];
             }
 
         }

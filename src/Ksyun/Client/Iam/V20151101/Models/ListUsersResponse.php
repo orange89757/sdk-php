@@ -8,7 +8,7 @@ class ListUsersResponse extends BaseModel
          /** **/
          public  $ListUserResult;
 
-         /** 请求ID**/
+         /** **/
          public  $RequestId;
 
          public function __construct()

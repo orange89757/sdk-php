@@ -7,10 +7,14 @@ class ListPoliciesRequest extends BaseModel
 {
     public $RequestParams = [
          /**String**/
+        "Action" => null,
+         /**String**/
+        "Version" => null,
+         /**String**/
         "Marker" => null,
          /**String**/
         "MaxItems" => null,
-         /**Boolean**/
+         /**Int**/
         "OnlyAttached" => null,
          /**String**/
         "Scope" => null,
@@ -26,6 +30,20 @@ class ListPoliciesRequest extends BaseModel
     {
         if ($param === null) {
             return;
+        }
+        if (array_key_exists("Action",$param) and $param["Action"] !== null) {
+            if(is_bool($param["Action"])){
+                $this->RequestParams["Action"] = $param["Action"] ? "true" : "false";
+            } else {
+                $this->RequestParams["Action"] = $param["Action"];
+            }
+        }
+        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
+            if(is_bool($param["Version"])){
+                $this->RequestParams["Version"] = $param["Version"] ? "true" : "false";
+            } else {
+                $this->RequestParams["Version"] = $param["Version"];
+            }
         }
         if (array_key_exists("Marker",$param) and $param["Marker"] !== null) {
             if(is_bool($param["Marker"])){

@@ -5,8 +5,8 @@ use Ksyun\Common\BaseModel;
 
 class DeactivateMFADeviceResponse extends BaseModel
 {
-         /** **/
-         public  $RequestId;
+         /** DeactivateMFADeviceResponse**/
+         public  $DeactivateMFADeviceResponse;
 
          public function __construct()
          {
@@ -18,8 +18,8 @@ class DeactivateMFADeviceResponse extends BaseModel
             if ($param === null) {
                 return;
             }
-            if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-                $this->RequestId = $param["RequestId"];
+            if (array_key_exists("DeactivateMFADeviceResponse",$param) and $param["DeactivateMFADeviceResponse"] !== null) {
+                $this->DeactivateMFADeviceResponse = $param["DeactivateMFADeviceResponse"];
             }
 
         }

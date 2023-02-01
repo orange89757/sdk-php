@@ -8,10 +8,6 @@ class ListGroupsForUserRequest extends BaseModel
     public $RequestParams = [
          /**String**/
         "UserName" => null,
-         /**String**/
-        "MaxItems" => null,
-         /**String**/
-        "Marker" => null,
     ];
 
 
@@ -30,20 +26,6 @@ class ListGroupsForUserRequest extends BaseModel
                 $this->RequestParams["UserName"] = $param["UserName"] ? "true" : "false";
             } else {
                 $this->RequestParams["UserName"] = $param["UserName"];
-            }
-        }
-        if (array_key_exists("MaxItems",$param) and $param["MaxItems"] !== null) {
-            if(is_bool($param["MaxItems"])){
-                $this->RequestParams["MaxItems"] = $param["MaxItems"] ? "true" : "false";
-            } else {
-                $this->RequestParams["MaxItems"] = $param["MaxItems"];
-            }
-        }
-        if (array_key_exists("Marker",$param) and $param["Marker"] !== null) {
-            if(is_bool($param["Marker"])){
-                $this->RequestParams["Marker"] = $param["Marker"] ? "true" : "false";
-            } else {
-                $this->RequestParams["Marker"] = $param["Marker"];
             }
         }
 

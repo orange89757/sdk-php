@@ -5,11 +5,8 @@ use Ksyun\Common\BaseModel;
 
 class ListGroupsForUserResponse extends BaseModel
 {
-         /** **/
-         public  $ListGroupsForUserResult;
-
-         /** **/
-         public  $RequestId;
+         /** GroupId**/
+         public  $GroupId;
 
          public function __construct()
          {
@@ -21,11 +18,8 @@ class ListGroupsForUserResponse extends BaseModel
             if ($param === null) {
                 return;
             }
-            if (array_key_exists("ListGroupsForUserResult",$param) and $param["ListGroupsForUserResult"] !== null) {
-                $this->ListGroupsForUserResult = $param["ListGroupsForUserResult"];
-            }
-            if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-                $this->RequestId = $param["RequestId"];
+            if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+                $this->GroupId = $param["GroupId"];
             }
 
         }

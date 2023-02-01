@@ -5,11 +5,8 @@ use Ksyun\Common\BaseModel;
 
 class ListEntitiesForPolicyResponse extends BaseModel
 {
-         /** **/
-         public  $ListEntitiesForPolicyResult;
-
-         /** **/
-         public  $RequestId;
+         /** 授权的子用户列表**/
+         public  $PolicyUsers;
 
          public function __construct()
          {
@@ -21,11 +18,8 @@ class ListEntitiesForPolicyResponse extends BaseModel
             if ($param === null) {
                 return;
             }
-            if (array_key_exists("ListEntitiesForPolicyResult",$param) and $param["ListEntitiesForPolicyResult"] !== null) {
-                $this->ListEntitiesForPolicyResult = $param["ListEntitiesForPolicyResult"];
-            }
-            if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-                $this->RequestId = $param["RequestId"];
+            if (array_key_exists("PolicyUsers",$param) and $param["PolicyUsers"] !== null) {
+                $this->PolicyUsers = $param["PolicyUsers"];
             }
 
         }

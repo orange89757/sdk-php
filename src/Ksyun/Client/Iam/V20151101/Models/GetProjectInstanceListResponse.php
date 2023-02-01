@@ -5,11 +5,8 @@ use Ksyun\Common\BaseModel;
 
 class GetProjectInstanceListResponse extends BaseModel
 {
-         /** **/
-         public  $ListInstanceResult;
-
-         /** **/
-         public  $RequestId;
+         /** GetProjectInstanceListResponse**/
+         public  $GetProjectInstanceListResponse;
 
          public function __construct()
          {
@@ -21,11 +18,8 @@ class GetProjectInstanceListResponse extends BaseModel
             if ($param === null) {
                 return;
             }
-            if (array_key_exists("ListInstanceResult",$param) and $param["ListInstanceResult"] !== null) {
-                $this->ListInstanceResult = $param["ListInstanceResult"];
-            }
-            if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-                $this->RequestId = $param["RequestId"];
+            if (array_key_exists("GetProjectInstanceListResponse",$param) and $param["GetProjectInstanceListResponse"] !== null) {
+                $this->GetProjectInstanceListResponse = $param["GetProjectInstanceListResponse"];
             }
 
         }

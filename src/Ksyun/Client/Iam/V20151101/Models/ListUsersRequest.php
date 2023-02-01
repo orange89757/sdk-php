@@ -8,10 +8,8 @@ class ListUsersRequest extends BaseModel
     public $RequestParams = [
          /**String**/
         "Marker" => null,
-         /**Int**/
-        "MaxItems" => null,
          /**String**/
-        "AccessKey" => null,
+        "MaxItems" => null,
     ];
 
 
@@ -37,13 +35,6 @@ class ListUsersRequest extends BaseModel
                 $this->RequestParams["MaxItems"] = $param["MaxItems"] ? "true" : "false";
             } else {
                 $this->RequestParams["MaxItems"] = $param["MaxItems"];
-            }
-        }
-        if (array_key_exists("AccessKey",$param) and $param["AccessKey"] !== null) {
-            if(is_bool($param["AccessKey"])){
-                $this->RequestParams["AccessKey"] = $param["AccessKey"] ? "true" : "false";
-            } else {
-                $this->RequestParams["AccessKey"] = $param["AccessKey"];
             }
         }
 

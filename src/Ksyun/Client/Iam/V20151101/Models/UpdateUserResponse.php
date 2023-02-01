@@ -5,11 +5,8 @@ use Ksyun\Common\BaseModel;
 
 class UpdateUserResponse extends BaseModel
 {
-         /** UpdateUserResult**/
-         public  $UpdateUserResult;
-
-         /** **/
-         public  $RequestId;
+         /** UpdateUserResponse**/
+         public  $UpdateUserResponse;
 
          public function __construct()
          {
@@ -21,11 +18,8 @@ class UpdateUserResponse extends BaseModel
             if ($param === null) {
                 return;
             }
-            if (array_key_exists("UpdateUserResult",$param) and $param["UpdateUserResult"] !== null) {
-                $this->UpdateUserResult = $param["UpdateUserResult"];
-            }
-            if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-                $this->RequestId = $param["RequestId"];
+            if (array_key_exists("UpdateUserResponse",$param) and $param["UpdateUserResponse"] !== null) {
+                $this->UpdateUserResponse = $param["UpdateUserResponse"];
             }
 
         }

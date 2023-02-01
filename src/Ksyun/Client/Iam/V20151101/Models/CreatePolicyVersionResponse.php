@@ -5,11 +5,8 @@ use Ksyun\Common\BaseModel;
 
 class CreatePolicyVersionResponse extends BaseModel
 {
-         /** **/
-         public  $CreatePolicyVersionResult;
-
-         /** **/
-         public  $RequestId;
+         /** CreatePolicyVersionResponse**/
+         public  $CreatePolicyVersionResponse;
 
          public function __construct()
          {
@@ -21,11 +18,8 @@ class CreatePolicyVersionResponse extends BaseModel
             if ($param === null) {
                 return;
             }
-            if (array_key_exists("CreatePolicyVersionResult",$param) and $param["CreatePolicyVersionResult"] !== null) {
-                $this->CreatePolicyVersionResult = $param["CreatePolicyVersionResult"];
-            }
-            if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-                $this->RequestId = $param["RequestId"];
+            if (array_key_exists("CreatePolicyVersionResponse",$param) and $param["CreatePolicyVersionResponse"] !== null) {
+                $this->CreatePolicyVersionResponse = $param["CreatePolicyVersionResponse"];
             }
 
         }

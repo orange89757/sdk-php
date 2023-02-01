@@ -5,11 +5,8 @@ use Ksyun\Common\BaseModel;
 
 class GetVirtualMFADeviceResponse extends BaseModel
 {
-         /** **/
-         public  $RequestId;
-
-         /** 设备信息**/
-         public  $VirtualMFADevice;
+         /** GetVirtualMFADeviceResponse**/
+         public  $GetVirtualMFADeviceResponse;
 
          public function __construct()
          {
@@ -21,11 +18,8 @@ class GetVirtualMFADeviceResponse extends BaseModel
             if ($param === null) {
                 return;
             }
-            if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-                $this->RequestId = $param["RequestId"];
-            }
-            if (array_key_exists("VirtualMFADevice",$param) and $param["VirtualMFADevice"] !== null) {
-                $this->VirtualMFADevice = $param["VirtualMFADevice"];
+            if (array_key_exists("GetVirtualMFADeviceResponse",$param) and $param["GetVirtualMFADeviceResponse"] !== null) {
+                $this->GetVirtualMFADeviceResponse = $param["GetVirtualMFADeviceResponse"];
             }
 
         }
