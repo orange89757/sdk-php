@@ -7,11 +7,11 @@ class ListAttachedUserPoliciesRequest extends BaseModel
 {
     public $RequestParams = [
          /**String**/
+        "UserName" => null,
+         /**String**/
         "Marker" => null,
          /**String**/
         "MaxItems" => null,
-         /**String**/
-        "UserName" => null,
     ];
 
 
@@ -25,6 +25,13 @@ class ListAttachedUserPoliciesRequest extends BaseModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
+            if(is_bool($param["UserName"])){
+                $this->RequestParams["UserName"] = $param["UserName"] ? "true" : "false";
+            } else {
+                $this->RequestParams["UserName"] = $param["UserName"];
+            }
+        }
         if (array_key_exists("Marker",$param) and $param["Marker"] !== null) {
             if(is_bool($param["Marker"])){
                 $this->RequestParams["Marker"] = $param["Marker"] ? "true" : "false";
@@ -37,13 +44,6 @@ class ListAttachedUserPoliciesRequest extends BaseModel
                 $this->RequestParams["MaxItems"] = $param["MaxItems"] ? "true" : "false";
             } else {
                 $this->RequestParams["MaxItems"] = $param["MaxItems"];
-            }
-        }
-        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
-            if(is_bool($param["UserName"])){
-                $this->RequestParams["UserName"] = $param["UserName"] ? "true" : "false";
-            } else {
-                $this->RequestParams["UserName"] = $param["UserName"];
             }
         }
 

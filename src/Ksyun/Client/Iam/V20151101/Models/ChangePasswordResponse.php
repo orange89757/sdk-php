@@ -5,8 +5,11 @@ use Ksyun\Common\BaseModel;
 
 class ChangePasswordResponse extends BaseModel
 {
-         /** ChangePasswordResponse**/
-         public  $ChangePasswordResponse;
+         /** **/
+         public  $result;
+
+         /** **/
+         public  $RequestId;
 
          public function __construct()
          {
@@ -18,8 +21,11 @@ class ChangePasswordResponse extends BaseModel
             if ($param === null) {
                 return;
             }
-            if (array_key_exists("ChangePasswordResponse",$param) and $param["ChangePasswordResponse"] !== null) {
-                $this->ChangePasswordResponse = $param["ChangePasswordResponse"];
+            if (array_key_exists("result",$param) and $param["result"] !== null) {
+                $this->result = $param["result"];
+            }
+            if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+                $this->RequestId = $param["RequestId"];
             }
 
         }

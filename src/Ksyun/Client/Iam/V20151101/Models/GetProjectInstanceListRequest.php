@@ -6,10 +6,14 @@ use Ksyun\Common\BaseModel;
 class GetProjectInstanceListRequest extends BaseModel
 {
     public $RequestParams = [
+         /**Int**/
+        "ProjectId" => null,
          /**String**/
-        "Action" => null,
-         /**String**/
-        "Version" => null,
+        "ProductLine" => null,
+         /**Int**/
+        "Ps" => null,
+         /**Int**/
+        "Pn" => null,
     ];
 
 
@@ -23,18 +27,32 @@ class GetProjectInstanceListRequest extends BaseModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Action",$param) and $param["Action"] !== null) {
-            if(is_bool($param["Action"])){
-                $this->RequestParams["Action"] = $param["Action"] ? "true" : "false";
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            if(is_bool($param["ProjectId"])){
+                $this->RequestParams["ProjectId"] = $param["ProjectId"] ? "true" : "false";
             } else {
-                $this->RequestParams["Action"] = $param["Action"];
+                $this->RequestParams["ProjectId"] = $param["ProjectId"];
             }
         }
-        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
-            if(is_bool($param["Version"])){
-                $this->RequestParams["Version"] = $param["Version"] ? "true" : "false";
+        if (array_key_exists("ProductLine",$param) and $param["ProductLine"] !== null) {
+            if(is_bool($param["ProductLine"])){
+                $this->RequestParams["ProductLine"] = $param["ProductLine"] ? "true" : "false";
             } else {
-                $this->RequestParams["Version"] = $param["Version"];
+                $this->RequestParams["ProductLine"] = $param["ProductLine"];
+            }
+        }
+        if (array_key_exists("Ps",$param) and $param["Ps"] !== null) {
+            if(is_bool($param["Ps"])){
+                $this->RequestParams["Ps"] = $param["Ps"] ? "true" : "false";
+            } else {
+                $this->RequestParams["Ps"] = $param["Ps"];
+            }
+        }
+        if (array_key_exists("Pn",$param) and $param["Pn"] !== null) {
+            if(is_bool($param["Pn"])){
+                $this->RequestParams["Pn"] = $param["Pn"] ? "true" : "false";
+            } else {
+                $this->RequestParams["Pn"] = $param["Pn"];
             }
         }
 

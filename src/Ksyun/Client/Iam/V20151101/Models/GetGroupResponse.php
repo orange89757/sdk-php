@@ -5,8 +5,11 @@ use Ksyun\Common\BaseModel;
 
 class GetGroupResponse extends BaseModel
 {
-         /** GroupId**/
-         public  $GroupId;
+         /** **/
+         public  $GetGroupResult;
+
+         /** **/
+         public  $RequestId;
 
          public function __construct()
          {
@@ -18,8 +21,11 @@ class GetGroupResponse extends BaseModel
             if ($param === null) {
                 return;
             }
-            if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-                $this->GroupId = $param["GroupId"];
+            if (array_key_exists("GetGroupResult",$param) and $param["GetGroupResult"] !== null) {
+                $this->GetGroupResult = $param["GetGroupResult"];
+            }
+            if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+                $this->RequestId = $param["RequestId"];
             }
 
         }

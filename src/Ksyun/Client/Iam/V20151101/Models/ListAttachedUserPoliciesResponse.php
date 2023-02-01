@@ -5,8 +5,11 @@ use Ksyun\Common\BaseModel;
 
 class ListAttachedUserPoliciesResponse extends BaseModel
 {
-         /** ff**/
-         public  $fff;
+         /** **/
+         public  $RequestId;
+
+         /** **/
+         public  $ListAttachedUserPoliciesResult;
 
          public function __construct()
          {
@@ -18,8 +21,11 @@ class ListAttachedUserPoliciesResponse extends BaseModel
             if ($param === null) {
                 return;
             }
-            if (array_key_exists("fff",$param) and $param["fff"] !== null) {
-                $this->fff = $param["fff"];
+            if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+                $this->RequestId = $param["RequestId"];
+            }
+            if (array_key_exists("ListAttachedUserPoliciesResult",$param) and $param["ListAttachedUserPoliciesResult"] !== null) {
+                $this->ListAttachedUserPoliciesResult = $param["ListAttachedUserPoliciesResult"];
             }
 
         }

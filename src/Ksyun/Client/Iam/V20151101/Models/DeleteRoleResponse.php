@@ -5,8 +5,11 @@ use Ksyun\Common\BaseModel;
 
 class DeleteRoleResponse extends BaseModel
 {
-         /** DeleteRoleResponse**/
-         public  $DeleteRoleResponse;
+         /** **/
+         public  $result;
+
+         /** **/
+         public  $RequestId;
 
          public function __construct()
          {
@@ -18,8 +21,11 @@ class DeleteRoleResponse extends BaseModel
             if ($param === null) {
                 return;
             }
-            if (array_key_exists("DeleteRoleResponse",$param) and $param["DeleteRoleResponse"] !== null) {
-                $this->DeleteRoleResponse = $param["DeleteRoleResponse"];
+            if (array_key_exists("result",$param) and $param["result"] !== null) {
+                $this->result = $param["result"];
+            }
+            if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+                $this->RequestId = $param["RequestId"];
             }
 
         }

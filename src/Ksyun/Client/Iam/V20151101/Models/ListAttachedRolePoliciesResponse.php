@@ -5,8 +5,11 @@ use Ksyun\Common\BaseModel;
 
 class ListAttachedRolePoliciesResponse extends BaseModel
 {
-         /** ListAttachedRolePoliciesResponse**/
-         public  $ListAttachedRolePoliciesResponse;
+         /** **/
+         public  $ListAttachedRolePoliciesResult;
+
+         /** **/
+         public  $RequestId;
 
          public function __construct()
          {
@@ -18,8 +21,11 @@ class ListAttachedRolePoliciesResponse extends BaseModel
             if ($param === null) {
                 return;
             }
-            if (array_key_exists("ListAttachedRolePoliciesResponse",$param) and $param["ListAttachedRolePoliciesResponse"] !== null) {
-                $this->ListAttachedRolePoliciesResponse = $param["ListAttachedRolePoliciesResponse"];
+            if (array_key_exists("ListAttachedRolePoliciesResult",$param) and $param["ListAttachedRolePoliciesResult"] !== null) {
+                $this->ListAttachedRolePoliciesResult = $param["ListAttachedRolePoliciesResult"];
+            }
+            if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+                $this->RequestId = $param["RequestId"];
             }
 
         }
