@@ -3,13 +3,15 @@ namespace  Ksyun\Client\Iam\V20151101\Models;
 
 use Ksyun\Common\BaseModel;
 
-class ListUsersRequest extends BaseModel
+class ListAttachedUserPoliciesRequest extends BaseModel
 {
     public $RequestParams = [
          /**String**/
         "Marker" => null,
          /**String**/
         "MaxItems" => null,
+         /**String**/
+        "UserName" => null,
     ];
 
 
@@ -35,6 +37,13 @@ class ListUsersRequest extends BaseModel
                 $this->RequestParams["MaxItems"] = $param["MaxItems"] ? "true" : "false";
             } else {
                 $this->RequestParams["MaxItems"] = $param["MaxItems"];
+            }
+        }
+        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
+            if(is_bool($param["UserName"])){
+                $this->RequestParams["UserName"] = $param["UserName"] ? "true" : "false";
+            } else {
+                $this->RequestParams["UserName"] = $param["UserName"];
             }
         }
 

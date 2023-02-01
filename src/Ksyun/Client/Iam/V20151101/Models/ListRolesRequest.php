@@ -3,12 +3,12 @@ namespace  Ksyun\Client\Iam\V20151101\Models;
 
 use Ksyun\Common\BaseModel;
 
-class ListUsersRequest extends BaseModel
+class ListRolesRequest extends BaseModel
 {
     public $RequestParams = [
          /**String**/
         "Marker" => null,
-         /**String**/
+         /**Int**/
         "MaxItems" => null,
     ];
 

@@ -3,7 +3,7 @@ namespace  Ksyun\Client\Iam\V20151101\Models;
 
 use Ksyun\Common\BaseModel;
 
-class ListUsersResponse extends BaseModel
+class CreateUserResponse extends BaseModel
 {
          /** **/
          public  $ListUserResult;

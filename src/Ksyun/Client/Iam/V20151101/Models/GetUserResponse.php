@@ -3,10 +3,10 @@ namespace  Ksyun\Client\Iam\V20151101\Models;
 
 use Ksyun\Common\BaseModel;
 
-class ListUsersResponse extends BaseModel
+class GetUserResponse extends BaseModel
 {
          /** **/
-         public  $ListUserResult;
+         public  $GetUserResult;
 
          /** **/
          public  $RequestId;
@@ -21,8 +21,8 @@ class ListUsersResponse extends BaseModel
             if ($param === null) {
                 return;
             }
-            if (array_key_exists("ListUserResult",$param) and $param["ListUserResult"] !== null) {
-                $this->ListUserResult = $param["ListUserResult"];
+            if (array_key_exists("GetUserResult",$param) and $param["GetUserResult"] !== null) {
+                $this->GetUserResult = $param["GetUserResult"];
             }
             if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
                 $this->RequestId = $param["RequestId"];

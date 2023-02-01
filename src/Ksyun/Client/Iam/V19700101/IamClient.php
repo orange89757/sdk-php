@@ -1,6 +1,6 @@
 <?php
 
-namespace Ksyun\Client\Iam\V20151101;
+namespace Ksyun\Client\Iam\V19700101;
 
 use Ksyun\Common\BaseClient;
 use Ksyun\Common\Http\HttpOptions;
@@ -23,7 +23,7 @@ class IamClient extends BaseClient
     /**
      * @var string
      */
-    protected $version = "2015-11-01";
+    protected $version = "v1";
 
     /**
      * @param Credential $credential
@@ -38,7 +38,7 @@ class IamClient extends BaseClient
 
     public function returnResponse($action, $response)
     {
-        $respClass = "Ksyun\Client"."\\".ucfirst("iam")."\\"."V20151101\\Models"."\\".ucfirst($action)."Response";
+        $respClass = "Ksyun\Client"."\\".ucfirst("iam")."\\"."V19700101\\Models"."\\".ucfirst($action)."Response";
         $obj = new $respClass();
         $obj->unserialize($response);
         return $obj;
